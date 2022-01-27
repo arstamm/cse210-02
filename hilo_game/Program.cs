@@ -6,10 +6,7 @@ namespace hilo_game
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
-
             Director director = new Director();
-            director.Test();
             director.StartGame();
         }
     }

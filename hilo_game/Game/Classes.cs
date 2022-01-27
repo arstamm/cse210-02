@@ -2,25 +2,57 @@ using System;
 
 namespace hilo_game.Game
 {
-    public class Score
-    {
-        public Score()
-        {
-        }
-        public void Test()
-        {
-            Console.WriteLine("Score class connected");
-        }
-    }
     public class Card
     {
+        //states
+        int card_value;
+        int card_range;
         public Card()
         {
         }
-        public void Test()
+
+        //Behaviors
+        public void Draw()
         {
-            Console.WriteLine("Card class connected");
+
         }
+
+        public void Display()
+        {
+
+        }
+
+        public void SetRange()
+        {
+
+        }
+
+    }
+    public class Score
+    {
+        //States
+        int score;
+        public Score()
+        {
+        }
+
+        //Behaviors
+        public void Display()
+        {
+
+        }
+
+        public void Update()
+        {
+
+        }
+
+        public void IsZero()
+        {
+            
+        }
+ 
+
 
     }
 }
