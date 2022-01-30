@@ -5,6 +5,7 @@
 **Created By:** Andrew Stamm
 
 **Description:**
+
 This repo contains a simple card game that can be played from the console called
 the "Hilo Game."
 
