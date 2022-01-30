@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace hilo_game.Game
 {
+    //This class acts like a deck of cards for the game
     public class Deck
     {
-        // Variables
-        private const int DefaultRange = 13;
+        //Variables
         static List<int> _drawPile = new List<int>();
         static List<int> _discardPile = new List<int>();
         static int _range;
@@ -22,12 +22,11 @@ namespace hilo_game.Game
         }
 
         //Constructor
-        public Deck()
-        {
-            SetRange(DefaultRange);
-        }
+        public Deck() => SetRange(1);
 
-        //Behaviors
+        //Methods
+
+        //"Reset" clears the deck and places cards into the draw pile according to the specified range
         public void Reset()
         {   
             //Clear Deck
@@ -40,12 +39,16 @@ namespace hilo_game.Game
                 _drawPile.Add(i);
             }
         }
+
+        //"SetRange" sets up the number of cards in the deck and resets the deck
         public void SetRange(int range)
         {
             //Set new range and reset Deck
             _range = range;
             Reset();
         }
+
+        //"Shuffle" resets the deck and shuffles the cards around
         public void Shuffle()
         {   
             //Reset deck
@@ -67,32 +70,18 @@ namespace hilo_game.Game
             _drawPile.AddRange(_shufflePile);
 
         }
-        public void ShuffleAndContinue()
-        {
-            int card = TopCard;
-            Shuffle();
-            Draw(card);
-        }
-        public void Draw(int card = 0)
+
+        //"Draw" draws a new card
+        //If the pile is empty, the deck reshuffles and all the cards are placed back in the deck with the exception of the newly drawn card.
+        public void Draw()
         {   
-            if (card == 0)
+            int card = NextCard;
+            if (_drawPile.Count == 1)
             {
-                card = _drawPile[_drawPile.Count - 1];
+                Shuffle();
             }
-            _discardPile.Add(card);
             _drawPile.Remove(card);
-   
-        }
-        public bool IsEmpty()
-        {
-            if (_drawPile.Count == 0) 
-            {
-                return true;
-            }
-            else 
-            {
-                return false;
-            }      
+            _discardPile.Add(card);
         }
     }
 }
