@@ -1,10 +1,10 @@
 # **cse210-02** - Hilo Game
 
 **Project:** Hilo Game
+
 **Created By:** Andrew Stamm
 
-Description
-----
+**Description:**
 This repo contains a simple card game that can be played from the console called
 the "Hilo Game."
 
