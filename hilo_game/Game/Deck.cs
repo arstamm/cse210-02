@@ -7,9 +7,9 @@ namespace hilo_game.Game
     public class Deck
     {
         //Variables
-        static List<int> _drawPile = new List<int>();
-        static List<int> _discardPile = new List<int>();
-        static int _range;
+        private List<int> _drawPile = new List<int>();
+        private List<int> _discardPile = new List<int>();
+        private int _range;
 
         //Properties
         public int TopCard 

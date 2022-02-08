@@ -7,8 +7,8 @@ namespace hilo_game.Game
     public class Score
     {
         //Variables
-        static int _score;
-        static int _defaultScore;
+        private int _score;
+        private int _defaultScore;
 
         //Constructor
         public Score() => SetDefault(0);
