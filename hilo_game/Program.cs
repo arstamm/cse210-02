@@ -12,5 +12,3 @@ namespace hilo_game
         }
     }
 }
-
-// Test
